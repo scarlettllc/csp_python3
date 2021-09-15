@@ -1,3 +1,4 @@
+# final version
 n = int(input())
 partial = 0
 total = 3
