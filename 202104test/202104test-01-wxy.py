@@ -17,3 +17,25 @@ def solution(n: int):
 if __name__ == "__main__":
     n = eval(input())
     solution(n)
+
+'''
+def solution(n: int):
+    pre = [1, 0]
+    total = 1
+    for i in range(n-1):
+        pre[1] = pre[0]
+        pre[0] = total * 2
+        total = sum(pre)
+
+    total = str(total*3)
+
+    if len(total) < 16:
+        print(total)
+    else:
+        print("......", total[-10:], sep="")
+
+
+if __name__ == "__main__":
+    n = eval(input())
+    solution(n)
+'''
