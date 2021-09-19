@@ -29,13 +29,14 @@ for j in range(4):
 j_0 = 0
 least = grid_top[0] - square_bottom[0]
 for j in range(1, 4):
-    if grid_top[j] - square_bottom[j] < least:
+    if grid_top[j] - square_bottom[j] < least or square_bottom[j_0] == -1:
         least = grid_top[j] - square_bottom[j]
         j_0 = j
 for i in range(4):
     for j in range(4):
         if square[i][j] == 1:
             grid[i - square_bottom[j_0] + grid_top[j_0] - 1][j + left] = 1
+
 for i in range(15):
     for j in range(10):
         print(grid[i][j], end=' ')
